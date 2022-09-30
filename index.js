@@ -20,7 +20,7 @@ formulario.addEventListener("submit", (e) => {
     ))
     contador ++;
     personas.forEach(persona => {
-        let turnopantalla = document.createElement("div")
+        let turnopantalla = document.createElement("div");
         turnopantalla.innerHTML = `
         <h2>Nombre: ${persona.nombre}</h2>
         <h3>Turno: ${persona.turno}</h3>`
