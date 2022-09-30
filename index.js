@@ -1,5 +1,5 @@
-const div = document.getElementById("div")
-
+let formulario = document.getElementById("formulario");
+const div = document.getElementById("div");
 const personas = [];
 let contador = 0;
 
@@ -10,20 +10,18 @@ class Persona{
     }
 }
 
-/* personas.push(new Persona(
-    nombre = nombre,
-    turno = contador + 1,
-))
-
-let nombre = prompt("ingrese su nombre"); */
-for(contador; contador < 5; contador ++){
-    nombre = prompt("ingrese su nombre");
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let inputs = e.target.children;
+    /* let nombre = inputs[1].value; */
     personas.push(new Persona({
-        nombre : nombre,
+        nombre : inputs[1].value,
         turno : contador + 1
     }
     ))
-}
+    contador ;
+    console.log(personas);
+})
 
 personas.forEach(persona => {
     let turnopantalla = document.createElement("div")
